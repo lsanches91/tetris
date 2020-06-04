@@ -102,13 +102,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function moveLeft() {
     removeShape()
+    
     const isAtLeftSide = currentShape.some(index => (currentPosition + index) % width === 0)
 
-    if(!isAtLeftSide) currentPosition -= 1
-
-    if(currentShape.some(index => currentShape[currentPosition + index].classList.contains('taken'))) {
-      currentPosition += 1
+    if(!isAtLeftSide) {
+      currentPosition -= 1
     }
+    
+    if(currentShape.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition += 1
+    }    
 
     drawShape()
   }
@@ -117,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
     removeShape()
     const isAtRightSide = currentShape.some(index => (currentPosition +index) % width === width -1)
 
-    if(!isAtRightSide) currentPosition += 1
+    if(!isAtRightSide) currentPosition += 1    
 
-    if(currentShape.some(index => currentShape[currentPosition + index].classList.contains('taken'))) {
+    if(currentShape.some(index => squares[currentPosition + index].classList.contains('taken'))) {
       currentPosition -= 1
     }
 

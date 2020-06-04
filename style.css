@@ -8,11 +8,13 @@
 
 .grid div {
   width: 20px;
-  height: 20px;  
+  height: 20px;
 }
 
 .shapes {
-  background-color: coral;
+  background-color: coral;  
+  box-sizing: border-box;
+  border: 1px solid black; 
 }
 
 .mini-grid {
