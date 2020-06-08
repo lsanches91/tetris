@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function drawShape() {
     currentShape.forEach(index => {
       squares[currentPosition + index].classList.add('shapes')
-      squares[currentPosition + index].style.backgroundColor = 'coral'
+      squares[currentPosition + index].style.backgroundColor = 'rgb(238, 108, 77)'
     })
   }
 
@@ -189,12 +189,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if(timerID) {
       clearInterval(timerID)
       timerID = null
+      startButton.innerHTML = 'Start'
     }
     else {
       drawShape()
       timerID = setInterval(moveDown, 1000)
       nextRandom = Math.floor(Math.random() * allShapes.length)
       displayNextShape()
+      startButton.innerHTML = 'Stop'
     }
   })
 
