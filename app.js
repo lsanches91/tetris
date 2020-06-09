@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   const scoreDisplay = document.querySelector('#score')
-  const startButton = document.querySelector('#startButton')  
+  const startButton = document.querySelector('#startButton')
+  const scoreText = document.querySelector('.score-display')  
   const width = 10
   let squares = Array.from(document.querySelectorAll('.grid div'))
   let nextRandom = 0
@@ -220,9 +221,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function gameOver() {
-    if (currentShape.some(index => squares[currentShape + index].classList.contains('taken'))) {
-      scoreDisplay.innerHTML = 'Game Over'
+    if (currentShape.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      scoreText.innerHTML = 'Game Over'
+      scoreText.style.fontSize = '33px'
+      
       clearInterval(timerID)
+      
     }
   }
 

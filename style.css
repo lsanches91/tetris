@@ -32,7 +32,7 @@ h1 {
 .mini-grid {
   width: 80px;
   height: 80px;
-  margin-left: 50px;
+  margin-left: 75px;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(152, 193, 217);
@@ -50,10 +50,14 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .info {
+  width: 200px;
+  height: 400px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -78,7 +82,7 @@ h1 {
 }
 
 .start-button {
-  margin-left: 50px;
+  margin-left: 75px;
   background-color: rgb(41, 50, 65);  
   height: 90px;
   width: 90px;
